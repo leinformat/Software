@@ -1,0 +1,28 @@
+# Ignore node_modules in both folders
+client/node_modules/
+server/node_modules/
+node_modules/
+
+# Ignore environment files
+.env
+client/.env
+server/.env
+
+# Ignore dependency lock files
+client/package-lock.json
+client/yarn.lock
+server/package-lock.json
+server/yarn.lock
+
+# Ignore build and temporary files
+server/dist/
+server/build/
+server/out/
+server/tmp/
+server/temp/
+
+client/dist/
+client/build/
+client/out/
+client/tmp/
+client/temp/
