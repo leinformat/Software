@@ -1,0 +1,10 @@
+{
+    "name": "root",
+    "version": "0.1.0",
+    "scripts": {
+        "start": "cd ./server/src/ && npm start",
+        "dev": "cd ./server/src/ && npm run dev"
+    },
+    "author": "Leinformat",
+    "license": "MIT"
+}
