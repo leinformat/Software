@@ -1,5 +1,5 @@
 import express from 'express';
-import { ClientController } from '../controllers/clientController.js';
+import { ClientController } from '../controllers/database/clientController.js';
 
 export const clientRoutes = express.Router();
 
@@ -7,5 +7,5 @@ export const clientRoutes = express.Router();
 clientRoutes.get('/', ClientController.getAll);
 clientRoutes.get('/:id', ClientController.getById);
 clientRoutes.post('/', ClientController.create);
-clientRoutes.put('/:id', ClientController.update);
-clientRoutes.delete('/:id', ClientController.delete);
+/* clientRoutes.put('/:id', ClientController.update);
+clientRoutes.delete('/:id', ClientController.delete); */
