@@ -28,12 +28,20 @@ export class BaseModel {
     }
   
     async update(id, data) {
+      const record = await this.getById({ id });
+
+      if (!Object.keys(record).length) {
+        return { message: `Record with id ${id} not found` };
+      }
+
+      delete data.id;
       await database.query(`UPDATE ${this.table} SET ? WHERE id = ?`, [data, id]);
-      return this.getById(id);
+
+      return { id, ...data };
     }
   
     async delete(id) {
       await database.query(`DELETE FROM ${this.table} WHERE id = ?`, [id]);
       return { message: `Deleted record with id ${id}` };
     }
-  }  
+  }
